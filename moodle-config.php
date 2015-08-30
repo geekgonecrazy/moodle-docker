@@ -38,7 +38,7 @@ $CFG = new stdClass();
 // will be stored.  This database must already have been created         //
 // and a username/password created to access it.                         //
 
-$CFG->dbtype    = 'mysqli';      // 'pgsql', 'mariadb', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
+$CFG->dbtype    = getenv('DRIVER');      // 'pgsql', 'mariadb', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
 $CFG->dblibrary = 'native';     // 'native' only at the moment
 $CFG->dbhost    = getenv('MYSQL_HOST');  // eg 'localhost' or 'db.isp.com' or IP
 $CFG->dbname    = getenv('MYSQL_DB');     // database name, eg moodle

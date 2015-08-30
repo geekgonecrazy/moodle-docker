@@ -7,6 +7,7 @@ VOLUME ['/var/moodledata']
 EXPOSE 80
 COPY moodle-config.php /var/www/html/config.php
 
+ENV DRIVER mysqli
 ENV MYSQL_HOST mysql
 ENV MYSQL_DB moodle
 ENV MYSQL_USER moodle
